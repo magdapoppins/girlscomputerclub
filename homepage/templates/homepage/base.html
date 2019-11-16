@@ -1,0 +1,22 @@
+{% load static %}
+<html>
+    <head>
+		<title>Girls Computer Club</title>
+		<link rel="stylesheet" href="{% static 'css/homepage.css' %}">
+    </head>
+    <body>
+        <div>
+			<h1><a href="/">Girls Computer Club</a></h1>
+			{% if user.is_authenticated %}
+				<a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus">New post</span></a>
+			{% endif %}
+        </div>
+		<div class="content container">
+			<div>
+				<div>
+				{% block content %}
+				{% endblock %}
+				</div>
+			</div>
+		</div>
+</html>
