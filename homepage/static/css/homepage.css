@@ -1,0 +1,120 @@
+/* Body and headers */
+
+body {
+    margin: 0;
+}
+
+h1 {
+    font-size: 3em;
+    text-decoration: none;
+}
+
+h1, h2 {
+    text-transform: uppercase;
+}
+
+h1, h2, h3 {
+    color: #2E3092;
+    font-family: 'Roboto', sans-serif;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+}
+
+
+/* Banner, banner image and text */
+
+.logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 60px;
+    margin-bottom: 40px;
+}
+
+.header {
+    padding: 60px 60px 0 60px;
+}
+
+.new-post {
+    font-size: 1.4em;
+    color: hotpink;
+    background-color: white;
+    height: 20px;
+    width: 50px;
+}
+
+.banner {
+    opacity: 0.4;
+    position: absolute;
+    top:0;
+    left: 0;
+    z-index: -1;
+}
+
+.banner-text {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    text-decoration: none;
+    font-family: 'Quicksand', sans-serif;
+    letter-spacing: 1.1em;
+    line-height: 0.9em;
+}
+
+.banner-description {
+    text-align: center;
+    line-height: 0.5em;
+    color: rgb(46, 46, 46);
+    font-size: 1.2em;
+}
+
+.banner-socials {
+    padding: 20px 430px 100px 430px;
+    display: flex;
+    justify-content: space-between;
+    color: #2E3092;
+}
+
+/* Content container, postedit and post details */
+
+.container {
+    margin: 50px;
+    padding: 20px 100px 20px 100px;
+    background-color: white;
+}
+
+.post-in-list {
+    padding: 30px;
+}
+
+.post-in-list a {
+    text-decoration: none;
+}
+
+.post-edit {
+    padding: 30px;
+}
+
+.post-detail {
+    padding: 30px;
+}
+
+/* Footer, member profiles and member container*/
+
+.footer {
+    padding: 20px 200px 20px 200px;
+    background-color: white;
+    text-align: center;
+}
+
+.members-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.member-info {
+    padding: 40px;
+    text-align: center;
+}
