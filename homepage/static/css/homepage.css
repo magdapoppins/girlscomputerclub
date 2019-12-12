@@ -51,31 +51,32 @@ p {
     top:0;
     left: 0;
     z-index: -1;
+      filter: blur(3px);
+  -webkit-filter: blur(3px);
 }
 
 .banner-text {
     display: flex;
     justify-content: center;
     width: 100%;
-    text-decoration: none;
+    text-decoration: bold;
     font-family: 'Quicksand', sans-serif;
-    letter-spacing: 1.1em;
+    letter-spacing: 0.6em;
     line-height: 0.9em;
 }
 
 .banner-description {
     text-align: center;
-    line-height: 0.5em;
     color: rgb(46, 46, 46);
     font-size: 1.2em;
 }
 
-.banner-socials {
+/*.banner-socials {
     padding: 20px 430px 100px 430px;
     display: flex;
     justify-content: space-between;
     color: #2E3092;
-}
+}*/
 
 /* Content container, postedit and post details */
 
@@ -108,13 +109,28 @@ p {
     background-color: white;
     text-align: center;
 }
-
-.members-container {
-    display: flex;
-    justify-content: space-between;
+.row{
+    text-align: center;
 }
-
-.member-info {
+.col{
     padding: 40px;
     text-align: center;
+}
+.icon-bar {
+  width: 100%;
+  overflow: auto;
+}
+
+.icon-bar a {
+  float: center;
+  width: 20%;
+  text-align: center;
+  padding: 12px 0;
+  transition: all 0.3s ease;
+  font-size: 36px;
+    
+}
+
+.active {
+  background-color: #4CAF50;
 }
