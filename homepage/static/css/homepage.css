@@ -51,18 +51,8 @@ p {
     top:0;
     left: 0;
     z-index: -1;
-      filter: blur(3px);
+    filter: blur(3px);
   -webkit-filter: blur(3px);
-}
-
-.banner-text {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    text-decoration: bold;
-    font-family: 'Quicksand', sans-serif;
-    letter-spacing: 0.6em;
-    line-height: 0.9em;
 }
 
 .banner-description {
@@ -71,12 +61,11 @@ p {
     font-size: 1.2em;
 }
 
-/*.banner-socials {
-    padding: 20px 430px 100px 430px;
-    display: flex;
-    justify-content: space-between;
-    color: #2E3092;
-}*/
+.banner-text {
+    text-decoration: bold;
+    font-family: 'Quicksand', sans-serif;
+    line-height: 0.9em;
+}
 
 /* Content container, postedit and post details */
 
@@ -85,6 +74,11 @@ p {
     padding: 20px 100px 20px 100px;
     background-color: white;
 }
+
+  .container-fluid {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
 
 .post-in-list {
     padding: 30px;
@@ -102,20 +96,13 @@ p {
     padding: 30px;
 }
 
-/* Footer, member profiles and member container*/
+/* member profiles and member container*/
 
-.footer {
-    padding: 20px 200px 20px 200px;
-    background-color: white;
-    text-align: center;
-}
+
 .row{
     text-align: center;
 }
-.col{
-    padding: 40px;
-    text-align: center;
-}
+
 .icon-bar {
   width: 100%;
   overflow: auto;
