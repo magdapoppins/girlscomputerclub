@@ -51,30 +51,20 @@ p {
     top:0;
     left: 0;
     z-index: -1;
-}
-
-.banner-text {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    text-decoration: none;
-    font-family: 'Quicksand', sans-serif;
-    letter-spacing: 1.1em;
-    line-height: 0.9em;
+    filter: blur(3px);
+  -webkit-filter: blur(3px);
 }
 
 .banner-description {
     text-align: center;
-    line-height: 0.5em;
     color: rgb(46, 46, 46);
     font-size: 1.2em;
 }
 
-.banner-socials {
-    padding: 20px 430px 100px 430px;
-    display: flex;
-    justify-content: space-between;
-    color: #2E3092;
+.banner-text {
+    text-decoration: bold;
+    font-family: 'Quicksand', sans-serif;
+    line-height: 0.9em;
 }
 
 /* Content container, postedit and post details */
@@ -84,6 +74,11 @@ p {
     padding: 20px 100px 20px 100px;
     background-color: white;
 }
+
+  .container-fluid {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
 
 .post-in-list {
     padding: 30px;
@@ -101,20 +96,28 @@ p {
     padding: 30px;
 }
 
-/* Footer, member profiles and member container*/
+/* member profiles and member container*/
 
-.footer {
-    padding: 20px 200px 20px 200px;
-    background-color: white;
+
+.row{
     text-align: center;
 }
 
-.members-container {
-    display: flex;
-    justify-content: space-between;
+.icon-bar {
+  width: 100%;
+  overflow: auto;
 }
 
-.member-info {
-    padding: 40px;
-    text-align: center;
+.icon-bar a {
+  float: center;
+  width: 20%;
+  text-align: center;
+  padding: 12px 0;
+  transition: all 0.3s ease;
+  font-size: 36px;
+    
+}
+
+.active {
+  background-color: #4CAF50;
 }
