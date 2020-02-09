@@ -1,4 +1,7 @@
-{% extends 'homepage/base.html' %} {% block content %} {% for post in posts %}
+{% extends 'homepage/base.html' %} 
+
+{% block content %} 
+{% for post in posts %}
 <div class="post-in-list">
   <h2 class="text-break">
     <a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a>
@@ -6,4 +9,5 @@
   <p>published: {{ post.published_date }}</p>
   <p class="text-break">{{ post.text|linebreaksbr }}</p>
 </div>
-{% endfor %} {% endblock %}
+{% endfor %} 
+{% endblock %}
