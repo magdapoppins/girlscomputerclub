@@ -25,7 +25,7 @@ SECRET_KEY = '2cvu=2t8vi^63n118=9%z0dyt97a0@pc)$y#-+mi&$9kyarbiz'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['www.girlscomputerclub.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'www.girlscomputerclub.com']
 
 # Application definition
 
