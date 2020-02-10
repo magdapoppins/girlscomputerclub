@@ -46,7 +46,6 @@
                 <p class="banner-description">
                     We are a computer science club for girls and young women.
                 </p>
-
                 <div class="row">
                     <div class="icon-bar">
                         <a
@@ -77,54 +76,16 @@
                         ></a>
                     </div>
                 </div>
+
                 {% if user.is_authenticated %}
-                <a href="{% url 'post_new' %}" class="new-post"
-                    >New post! (Only admins see this.)</a
-                >
+                <a href="{% url 'post_new' %}" class="new-post">New post! (Only admins see this.)</a>
                 {% endif %}
             </div>
             <div class="content container">
                 <div>
                     <div>
-                        {% block content %} {% endblock %}
-                    </div>
-                </div>
-            </div>
-            <div class="container-fluid text-center">
-                <h2>Meet our board!</h2>
-                <div class="row mt-5">
-                    <div class="col-sm-4 mb-4 mb-sm-0">
-                        <img
-                            src="{% static 'images/logo.png' %}"
-                            width="100px"
-                            class="mb-4"
-                            alt=""
-                        />
-                        <h3>Magda</h3>
-                        <p class="title">Founder</p>
-                        <p>Lorem ipsum lipsum</p>
-                    </div>
-                    <div class="col-sm-4 mb-4 mb-sm-0">
-                        <img
-                            src="{% static 'images/logo.png' %}"
-                            width="100px"
-                            class="mb-4"
-                            alt=""
-                        />
-                        <h3>Lea</h3>
-                        <p class="title">Founder</p>
-                        <p>Lorem ipsum lipsum</p>
-                    </div>
-                    <div class="col-sm-4 mb-4 mb-sm-0">
-                        <img
-                            src="{% static 'images/logo.png' %}"
-                            width="100px"
-                            class="mb-4"
-                            alt=""
-                        />
-                        <h3>Heini</h3>
-                        <p class="title">Founder</p>
-                        <p>Lorem ipsum lipsum</p>
+                        {% block content %}
+                        {% endblock %}
                     </div>
                 </div>
             </div>

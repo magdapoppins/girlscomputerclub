@@ -120,3 +120,10 @@ p {
 .active {
     background-color: #4caf50;
 }
+
+img.member-profile {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+}
