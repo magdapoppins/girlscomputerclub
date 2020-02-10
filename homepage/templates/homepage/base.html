@@ -1,96 +1,94 @@
 {% load static %}
 <html lang="en">
-  <head>
-    <title>Girls Computer Club</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="{% static 'css/homepage.css' %}" />
-    <link
-      rel="shortcut icon"
-      href="{% static 'images/favicon.ico' type='image/x-icon' %}"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Quicksand&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
-      crossorigin="anonymous"
-    />
-  </head>
-  <body>
-    <main>
-      <div class="container-fluid bg-1 text-center">
-        <img
-          class="banner"
-          src="{% static 'images/helsinki.jpg' %}"
-          width="100%"
-          alt=""
+    <head>
+        <title>Girls Computer Club</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="{% static 'css/homepage.css' %}" />
+        <link
+            rel="shortcut icon"
+            href="{% static 'images/favicon.ico' type='image/x-icon' %}"
         />
-        <img
-          class="logo"
-          src="{% static 'images/logo.png' %}"
-          width="160px"
-          alt="Girls' Computer Club logo "
+        <link
+            href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
+            rel="stylesheet"
         />
-        <h1 class="banner-text">Girls' Computer Club</h1>
-        <p class="banner-description">
-          We are a computer science club for girls and young women.
-        </p>
+        <link
+            href="https://fonts.googleapis.com/css?family=Quicksand&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        />
+        <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+            integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+            crossorigin="anonymous"
+        />
+    </head>
+    <body>
+        <main>
+            <div class="container-fluid bg-1 text-center">
+                <img
+                    class="banner"
+                    src="{% static 'images/helsinki.jpg' %}"
+                    width="100%"
+                    alt=""
+                />
+                <img
+                    class="logo"
+                    src="{% static 'images/logo.png' %}"
+                    width="160px"
+                    alt="Girls' Computer Club logo "
+                />
+                <h1 class="banner-text">Girls' Computer Club</h1>
+                <p class="banner-description">
+                    We are a computer science club for girls and young women.
+                </p>
+                <div class="row">
+                    <div class="icon-bar">
+                        <a
+                            href="https://www.facebook.com/girlscomputerclub"
+                            aria-label="Follow us on Facebook!"
+                            ><i
+                                class="fa fa-facebook-square"
+                                style="font-size:36px; color: #2E3092;"
+                                alt=""
+                            ></i
+                        ></a>
+                        <a
+                            href="https://www.instagram.com/girlscomputerclub"
+                            class="pr-4 pl-4"
+                            aria-label="Follow us on Instagram!"
+                            ><i
+                                class="fa fa-instagram"
+                                style="font-size:36px; color: #2E3092;"
+                                alt=""
+                            ></i
+                        ></a>
+                        <a href="/" aria-label="Join our slack!"
+                            ><i
+                                class="fa fa-slack"
+                                style="font-size:36px; color: #2E3092;"
+                                alt=""
+                            ></i
+                        ></a>
+                    </div>
+                </div>
 
-        <div class="row">
-          <div class="icon-bar">
-            <a
-              href="https://www.facebook.com/girlscomputerclub"
-              aria-label="Follow us on Facebook!"
-              ><i
-                class="fa fa-facebook-square"
-                style="font-size:36px; color: #2E3092;"
-                alt=""
-              ></i
-            ></a>
-            <a
-              href="https://www.instagram.com/girlscomputerclub"
-              class="pr-4 pl-4"
-              aria-label="Follow us on Instagram!"
-              ><i
-                class="fa fa-instagram"
-                style="font-size:36px; color: #2E3092;"
-                alt=""
-              ></i
-            ></a>
-            <a href="/" aria-label="Join our slack!"
-              ><i
-                class="fa fa-slack"
-                style="font-size:36px; color: #2E3092;"
-                alt=""
-              ></i
-            ></a>
-          </div>
-		</div>
-		
-        {% if user.is_authenticated %}
-        <a href="{% url 'post_new' %}" class="new-post">New post! (Only admins see this.)</a>
-		{% endif %}
-		
-      </div>
-      <div class="content container">
-        <div>
-          <div>
-          {% block content %}
-          {% endblock %}
-          </div>
-        </div>
-      </div>
-    </main>
-  </body>
+                {% if user.is_authenticated %}
+                <a href="{% url 'post_new' %}" class="new-post">New post! (Only admins see this.)</a>
+                {% endif %}
+            </div>
+            <div class="content container">
+                <div>
+                    <div>
+                        {% block content %}
+                        {% endblock %}
+                    </div>
+                </div>
+            </div>
+        </main>
+    </body>
 </html>

@@ -1,16 +1,18 @@
 {% extends 'homepage/base.html' %}
 
 {% block content %}
-    <div class="post-detail">
-        {% if post.published_date %}
-            <div class="date">
-                {{ post.published_date }}
-            </div>
-        {% endif %}
-        <h2>{{ post.title }}</h2>
-        <p>{{ post.text|linebreaksbr }}</p>
-        {% if user.is_authenticated %}
-            <a class="btn btn-default" href="{% url 'post_edit' pk=post.pk %}"><span class="glyphicon glyphicon-pencil">Edit</span></a>
-        {% endif %}
+<div class="post-detail">
+    {% if post.published_date %}
+    <div class="date">
+        {{ post.published_date }}
     </div>
+    {% endif %}
+    <h2 class="text-break">{{ post.title }}</h2>
+    <p class="text-break">{{ post.text|linebreaksbr }}</p>
+    {% if user.is_authenticated %}
+    <a class="btn btn-default" href="{% url 'post_edit' pk=post.pk %}">
+      <span class="glyphicon glyphicon-pencil">Edit</span>
+    </a>
+    {% endif %}
+</div>
 {% endblock %}
